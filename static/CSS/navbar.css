@@ -1,0 +1,47 @@
+.container01 {
+    width: 80%;
+    margin: 5px auto;
+}
+
+.navbar01 {
+    background-color: black;
+    color: lightgrey;
+}
+
+.navbar01 a {
+    color: lightgray;
+    text-decoration: none;
+}
+
+.navbar01 li:hover {
+    background-color: #333;
+    cursor: pointer;
+}
+
+.navbar01 ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar01 li {
+    flex: 1;
+    text-align: center;
+    list-style-type: none;
+    padding: 15px 10px;
+}
+
+div.main {
+    margin: 5px;
+}
+
+div.main div:first-child {
+    width: 30%;
+    float: left;
+}
+
+div.main div:last-child {
+    width: 70%;
+    float: left;
+}

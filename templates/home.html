@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='CSS/navbar.css')}}">
+    </head>
+
+    <body>
+        <div class="container01">
+            <nav class="navbar01">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/guest_event">Events</a></li>
+                    <li><a href="/calendar">Calendar</a></li>
+                    <li>another thing</li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+             </nav>
+
+             <div class="main">
+
+                <div>
+                    <p>Welcome, this is our official page
+                        <br> add some text here, make the page looking good
+                    </p>
+                </div>
+                <div>
+                    <img src="{{url_for('static', filename='images/university_trip.jpeg')}}" alt="unversity Trip"  style="width: 100%; margin: 5px;">
+                    <img src="{{url_for('static', filename='images/student_meeting.jpeg')}}" alt="student Meeting" style="width: 100%; margin: 5px;">
+                </div>
+             </div>
+        </div>
+    </body>
+</html>
