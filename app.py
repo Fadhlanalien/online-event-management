@@ -9,7 +9,7 @@ app.secret_key = 'your_secret_key'  # change in production
 def get_db_connection():
     """Return a PostgreSQL connection using DATABASE_URL env var or fallback."""
     # Use environment variable provided by Render (or set locally)
-    database_url = "postgresql://online_event_management_db_user:RUtt08LBEcUcH3TN96O2elmsCMzNRSwK@dpg-d9hpk1epbkes738uukq0-a.virginia-postgres.render.com/online_event_management_db"
+    database_url = os.environ.get('DATABASE_URL')
     if database_url:
         conn = psycopg.connect(database_url)
     # else:
