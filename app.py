@@ -12,6 +12,8 @@ def get_db_connection():
     database_url = os.environ.get('DATABASE_URL')
     if database_url:
         conn = psycopg.connect(database_url)
+        
+        print(database_url)
     # else:
     #     # Fallback for local development – adjust credentials as needed
     #     conn = psycopg.connect(
@@ -21,6 +23,10 @@ def get_db_connection():
     #         password="your_password",
     #         port=5432
     #     )
+    
+    if not database_url:
+        raise ValueError("DATABASE_URL environment variable is not set.")
+ 
     return conn
 
 # ------------------- No-cache headers -------------------

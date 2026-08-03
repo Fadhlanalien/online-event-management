@@ -1,33 +1,41 @@
 <html>
-    <head>
-        <title>Home</title>
-        <link rel="stylesheet" href="{{url_for('static', filename='CSS/navbar.css')}}">
-    </head>
 
-    <body>
-        <div class="container01">
-            <nav class="navbar01">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/guest_event">Events</a></li>
-                    <li><a href="/calendar">Calendar</a></li>
-                    <li>another thing</li>
-                    <li><a href="/login">Login</a></li>
-                </ul>
-             </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/navbar.css')}}">
+</head>
 
-             <div class="main">
+<body>
+    <div class="container01">
+        <nav class="navbar01">
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul id="navMenu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/guest_event">Events</a></li>
+                <li><a href="/calendar">Calendar</a></li>
+                <li>another thing</li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
 
-                <div>
-                    <p>Welcome, this is our official page
-                        <br> add some text here, make the page looking good
-                    </p>
-                </div>
-                <div>
-                    <img src="{{url_for('static', filename='images/university_trip.jpeg')}}" alt="unversity Trip"  style="width: 100%; margin: 5px;">
-                    <img src="{{url_for('static', filename='images/student_meeting.jpeg')}}" alt="student Meeting" style="width: 100%; margin: 5px;">
-                </div>
-             </div>
+        <div class="main">
+
+            <div>
+                <p>Welcome, this is our official page
+                    <br> add some text here, make the page looking good
+                </p>
+            </div>
+            <div>
+                <img src="{{url_for('static', filename='images/university_trip.jpeg')}}" alt="unversity Trip"
+                    style="width: 100%; margin: 5px;">
+                <img src="{{url_for('static', filename='images/student_meeting.jpeg')}}" alt="student Meeting"
+                    style="width: 100%; margin: 5px;">
+            </div>
         </div>
-    </body>
+    </div>
+    <script src="{{url_for('static', filename='JS/navbar.js')}}"></script>
+</body>
+
 </html>
